@@ -161,7 +161,7 @@ vim.opt.scrolloff = 10
 --  See `:help vim.keymap.set()`
 
 -- Add kj combo to Esc
-vim.keymap.set("i", "kj", "<Esc>")
+vim.keymap.set('i', 'kj', '<Esc>')
 
 -- Set highlight on search, but clear on pressing <Esc> in normal mode
 vim.opt.hlsearch = true
@@ -834,7 +834,7 @@ require('lazy').setup({
     'sainnhe/sonokai',
     priority = 1000,
     config = function()
-      vim.cmd([[ let g:sonokai_style = 'espresso' ]])
+      vim.cmd [[ let g:sonokai_style = 'espresso' ]]
       vim.cmd.colorscheme 'sonokai'
     end,
   },
