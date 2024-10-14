@@ -841,23 +841,23 @@ require('lazy').setup({
     end,
   },
 
-  {
-    'catppuccin/nvim',
-    name = 'catppuccin',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
-  },
-
   -- {
-  --   'sainnhe/sonokai',
+  --   'catppuccin/nvim',
+  --   name = 'catppuccin',
   --   priority = 1000,
   --   config = function()
-  --     vim.cmd [[ let g:sonokai_style = 'espresso' ]]
-  --     vim.cmd.colorscheme 'sonokai'
+  --     vim.cmd.colorscheme 'catppuccin-mocha'
   --   end,
   -- },
+
+  {
+    'sainnhe/sonokai',
+    priority = 1000,
+    config = function()
+      vim.cmd [[ let g:sonokai_style = 'espresso' ]]
+      vim.cmd.colorscheme 'sonokai'
+    end,
+  },
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
