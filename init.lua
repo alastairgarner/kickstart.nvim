@@ -841,12 +841,20 @@ require('lazy').setup({
     end,
   },
 
+  -- {
+  --   'sainnhe/sonokai',
+  --   priority = 1000,
+  --   config = function()
+  --     vim.cmd [[ let g:sonokai_style = 'atlantis' ]]
+  --     vim.cmd.colorscheme 'sonokai'
+  --   end,
+  -- },
+
   {
-    'sainnhe/sonokai',
+    'catppuccin/nvim',
     priority = 1000,
     config = function()
-      vim.cmd [[ let g:sonokai_style = 'espresso' ]]
-      vim.cmd.colorscheme 'sonokai'
+      vim.cmd.colorscheme 'catppuccin-mocha'
     end,
   },
 
