@@ -397,7 +397,7 @@ require('lazy').setup({
         pickers = {
           find_files = {
             file_ignore_patterns = { 'node_modules', '.git', '.venv' },
-            hidden = true
+            hidden = true,
           },
         },
 
@@ -631,7 +631,7 @@ require('lazy').setup({
         -- clangd = {},
         -- gopls = {},
         -- pyright = {},
-        -- rust_analyzer = {},
+        rust_analyzer = {},
         -- ... etc. See `:help lspconfig-all` for a list of all the pre-configured LSPs
         --
         -- Some languages (like typescript) have entire language plugins that can be useful:
@@ -847,23 +847,6 @@ require('lazy').setup({
     end,
   },
 
-  -- {
-  --   'sainnhe/sonokai',
-  --   priority = 1000,
-  --   config = function()
-  --     vim.cmd [[ let g:sonokai_style = 'atlantis' ]]
-  --     vim.cmd.colorscheme 'sonokai'
-  --   end,
-  -- },
-
-  {
-    'catppuccin/nvim',
-    priority = 1000,
-    config = function()
-      vim.cmd.colorscheme 'catppuccin-mocha'
-    end,
-  },
-
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
 
@@ -968,7 +951,7 @@ require('lazy').setup({
   --    This is the easiest way to modularize your config.
   --
   --  Uncomment the following line and add your plugins to `lua/custom/plugins/*.lua` to get going.
-  -- { import = 'custom.plugins' },
+  { import = 'custom.plugins' },
   --
   -- For additional information with loading, sourcing and examples see `:help lazy.nvim-🔌-plugin-spec`
   -- Or use telescope!
