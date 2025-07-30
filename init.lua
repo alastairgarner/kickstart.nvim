@@ -396,7 +396,7 @@ require('lazy').setup({
         -- },
         pickers = {
           find_files = {
-            file_ignore_patterns = { 'node_modules', '.git', '.venv' },
+            file_ignore_patterns = { 'node_modules', '.git', '.venv', '.next', 'dist' },
             hidden = true,
           },
         },
@@ -638,7 +638,7 @@ require('lazy').setup({
         --    https://github.com/pmizio/typescript-tools.nvim
         --
         -- But for many setups, the LSP (`ts_ls`) will work just fine
-        -- ts_ls = {},
+        ts_ls = {},
         --
 
         lua_ls = {
@@ -849,6 +849,14 @@ require('lazy').setup({
 
   -- Highlight todo, notes, etc in comments
   { 'folke/todo-comments.nvim', event = 'VimEnter', dependencies = { 'nvim-lua/plenary.nvim' }, opts = { signs = false } },
+
+  {
+    'numToStr/Comment.nvim',
+    -- opts = {
+    --     -- add any options here
+    -- },
+  },
+
 
   { -- Collection of various small independent plugins/modules
     'echasnovski/mini.nvim',
